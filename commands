@@ -1,0 +1,32 @@
+kubectl port-forward <pod name> 8080:80
+
+minicube dashboard
+
+kubekuctl create -f pod.yaml  < -- create initial pod
+kubectl apply -f pod.yaml   < -- if you update the yaml, use this to apply update
+kubectl delete pod <pod name>
+kubectl describe pod <podname>
+kubectl create -f replicaset.yaml
+
+# deployment - if you delete a deployment, it also deletes the related replica sets and pods 
+
+kubectl delete deployment <deployment name>
+watch kubectl get pods
+
+# rolling deployment 
+  # note -  if you delete a deployment, it also deletes the related replica sets and pods 
+
+kubectl create -f deployment.yaml
+kubectl apply -f deployment.yaml   < -- if you update the yaml, use this to apply update
+kubectl delete deploy <deployment name>
+
+#to get into a container
+kubectl exec -it  <pod name>  -c  <container name> -- /bin/bash 
+if a webserver was deployed, run  curl localhost:80 and see if it pulls in the HTML
+kubectl logs <pod name>
+
+Kubectl get ingress
+
+# namespace
+kubectl get pods -n dev
+kubectl delete pod myapp2 -n dev
