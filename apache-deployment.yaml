@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: #deployment
+  name: myapachedeploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apache
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: apache
+    spec:
+      containers:
+        - name: apachecontainer #container
+          image: httpd
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80
