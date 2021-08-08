@@ -1,6 +1,8 @@
 kubectl port-forward <pod name> 8080:80
 
-kubectl create configmap <configmap name> --dry-run=client -o yaml > <name>.yaml <-- create a config map
+kubectl run <pod name> --image=nginx --dry-run=client -o yaml > <name>.yaml            <-- create pod
+
+kubectl create configmap <configmap name> --dry-run=client -o yaml > <name>.yaml       <-- create a config map
 
 
 minicube dashboard
