@@ -4,6 +4,8 @@ kubectl run <pod name> --image=nginx --dry-run=client -o yaml > <name>.yaml     
 
 kubectl create configmap <configmap name> --dry-run=client -o yaml > <name>.yaml       <-- create a config map
 
+kubectl create configmap <configmap name> --from-file=<filename>.yaml                  <-- create a config map from importing a file
+
 kubectl exec <podname> -- cat /<dir>/<file>
 kubectl exec <podname> -- ls /<dir>/<file>
 
