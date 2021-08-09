@@ -4,6 +4,9 @@ kubectl run <pod name> --image=nginx --dry-run=client -o yaml > <name>.yaml     
 
 kubectl create configmap <configmap name> --dry-run=client -o yaml > <name>.yaml       <-- create a config map
 
+kubectl exec <podname> -- cat /<dir>/<file>
+kubectl exec <podname> -- ls /<dir>/<file>
+
 
 minicube dashboard
 
