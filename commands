@@ -6,6 +6,8 @@ kubectl create configmap <configmap name> --dry-run=client -o yaml > <name>.yaml
 
 kubectl create configmap <configmap name> --from-file=<filename>.yaml                  <-- create a config map from importing a file
 
+kubectl get cm <name>  -o yaml > <filename>.yaml                                        <-- convert file into yaml
+
 kubectl exec <podname> -- cat /<dir>/<file>
 kubectl exec <podname> -- ls /<dir>/<file>
 
