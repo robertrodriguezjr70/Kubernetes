@@ -21,6 +21,8 @@ kubectl apply -f pod.yaml   < -- if you update the yaml, use this to apply updat
 kubectl delete pod <pod name>
 kubectl describe pod <podname>
 kubectl create -f replicaset.yaml
+kubectl logs -f <pod name>
+
 
 # deployment - if you delete a deployment, it also deletes the related replica sets and pods 
 
