@@ -1,3 +1,5 @@
+kubectl get all --all-namespaces
+
 kubectl port-forward <pod name> 8080:80
 
 kubectl run <pod name> --image=nginx --dry-run=client -o yaml > <name>.yaml            <-- create pod
