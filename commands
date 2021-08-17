@@ -8,6 +8,8 @@ kubectl create configmap <configmap name> --dry-run=client -o yaml > <name>.yaml
 
 kubectl create deployment <deployment name> --image=<image name>                       <-- create deployment
 
+kubectl scale --replicas=5 <deployment name>                                           <-- scale a deployment
+
 kubectl create configmap <configmap name> --from-file=<filename>.yaml                  <-- create a config map from importing a file
 
 kubectl get cm <name>  -o yaml > <filename>.yaml                                        <-- convert file into yaml
