@@ -1,3 +1,5 @@
+https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands  <-- command list
+
 kubectl get all --all-namespaces
 
 kubectl port-forward <pod name> 8080:80
